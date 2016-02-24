@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>   
+<!DOCTYPE mapper   
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.web.utils.Login_status_Mapper">
+	<!-- 这里namespace必须是UserMapper接口的路径，不然要运行的时候要报错 “is not known to the MapperRegistry” -->
+	<insert id="insertLogin_status" parameterType="Login_status">
+		insert into login_status(login_key,user_id,login_time) values(#{login_key},#{user_id},#{login_time})
+		<!-- 这里sql结尾不能加分号，否则报“ORA-00911”的错误 -->
+	</insert>
+
+	<!-- 这里的id必须和UserMapper接口中的接口方法名相同，不然运行的时候也要报错 -->
+	<select id="getLogin_status" resultType="Login_status" parameterType="java.lang.String">
+		select * from login_status where login_key=#{login_key}
+	</select>
+	<update id="updateLogin_status" parameterType="Login_status" >
+        update login_status set user_id=#{user_id},login_time=#{login_time} where login_key=#{login_key}
+    </update>
+	<delete id="deleteLogin_status" parameterType="java.lang.String">
+        delete from login_status where login_key=#{login_key}
+    </delete>
+</mapper>  

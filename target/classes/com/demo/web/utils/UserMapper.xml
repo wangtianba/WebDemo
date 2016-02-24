@@ -5,12 +5,16 @@
 <mapper namespace="com.demo.web.utils.UserMapper">
 	<!-- 这里namespace必须是UserMapper接口的路径，不然要运行的时候要报错 “is not known to the MapperRegistry” -->
 	<insert id="insertUser" parameterType="User">
-		insert into login(user_name,password,number,type) values(#{name},#{password},#{phone},#{type})
+		insert into user_info(user_name,password,number,type) values(#{name},#{password},#{number},#{type})
 		<!-- 这里sql结尾不能加分号，否则报“ORA-00911”的错误 -->
 	</insert>
 
 	<!-- 这里的id必须和UserMapper接口中的接口方法名相同，不然运行的时候也要报错 -->
-	<select id="getUser" resultType="User" parameterType="java.lang.String">
-		select * from login where user_name=#{name}
+	<select id="getUserByName" resultType="User" parameterType="java.lang.String">
+		select * from user_info where user_name=#{user_name}
+	</select>
+	
+	<select id="getUserById" resultType="User" parameterType="java.lang.Long">
+		select * from user_info where id=#{id}
 	</select>
 </mapper>  

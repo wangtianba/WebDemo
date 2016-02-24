@@ -93,5 +93,9 @@
      <property name="mapperInterface" value="com.demo.web.utils.UserMapper"></property>  
      <property name="sqlSessionFactory" ref="sqlSessionFactory"></property>  
  </bean>  
+ <bean id="login_status_Mapper" class="org.mybatis.spring.mapper.MapperFactoryBean">  
+     <property name="mapperInterface" value="com.demo.web.utils.Login_status_Mapper"></property>  
+     <property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+ </bean> 
     
 </beans>

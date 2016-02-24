@@ -2,21 +2,31 @@ package com.demo.web.utils;
 
 
 public class User {
-	private String name;
+	private int id;
+	private String user_name;
 	private String password;
-	private String phone;
+	private String number;
 	private String info;
 	private int type;
 	
-	public User(String name, String password, String phone, String info, int type) {
+	public User(String name, String password, String number, String info, int type) {
 		super();
-		this.name = name;
+		this.user_name = name;
 		this.password = password;
-		this.phone = phone;
+		this.number = number;
 		this.info = info;
 		this.type = type;
 	}
 
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	
 	public User() {
 		super();
 	}
@@ -29,12 +39,12 @@ public class User {
 		this.password = password;
 	}
 
-	public String getPhone() {
-		return phone;
+	public String getNumber() {
+		return number;
 	}
 
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setNumber(String phone) {
+		this.number = phone;
 	}
 
 	public String getInfo() {
@@ -54,11 +64,11 @@ public class User {
 	}
 
 	public String getName() {
-		return name;
+		return user_name;
 	}
 
 	public void setName(String name) {
-		this.name = name;
+		this.user_name = name;
 	}
 
 	

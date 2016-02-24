@@ -11,11 +11,14 @@
         <setting name="defaultExecutorType" value="REUSE" />   
     </settings>   
     <typeAliases>   
-       <typeAlias alias="User" type="com.demo.web.utils.User"/>   
+       <typeAlias alias="User" type="com.demo.web.utils.User"/>  
+       <typeAlias alias="Login_status" type="com.demo.web.utils.Login_status"/>
     </typeAliases>   
     <mappers>   
-        <mapper resource="com/demo/web/utils/UserMapper.xml" />   
+        <mapper resource="com/demo/web/utils/UserMapper.xml" /> 
+        <mapper resource="com/demo/web/utils/Login_status_Mapper.xml" />
     </mappers>   
 </configuration>  
+
 
  

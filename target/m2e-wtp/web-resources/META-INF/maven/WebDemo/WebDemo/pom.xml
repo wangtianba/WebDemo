@@ -44,35 +44,16 @@
   <artifactId>mysql-connector-java</artifactId>
   <version>5.1.36</version>
 </dependency>
-<dependency>
-  <groupId>org.springframework</groupId>
-  <artifactId>org.springframework.web.servlet</artifactId>
-  <version>3.2.5.RELEASE</version>
-</dependency>
-<dependency>
-  <groupId>org.hibernate</groupId>
-  <artifactId>hibernate-search-orm</artifactId>
-  <version>5.5.1.Final</version>
-</dependency>
+
 <dependency>
   <groupId>javax.servlet</groupId>
   <artifactId>javax.servlet</artifactId>
   <version>3.0.0.v201103241009</version>
 </dependency>
 <dependency>
-  <groupId>org.hibernate</groupId>
-  <artifactId>hibernate-validator</artifactId>
-  <version>5.2.3.Final</version>
-</dependency>
-<dependency>
   <groupId>org.mybatis</groupId>
   <artifactId>mybatis-spring</artifactId>
   <version>1.2.3</version>
   </dependency>
-  <dependency>
-  <groupId>org.springframework</groupId>
-  <artifactId>spring-jdbc</artifactId>
-  <version>4.2.2.RELEASE</version>
-</dependency>
   </dependencies>
 </project>
